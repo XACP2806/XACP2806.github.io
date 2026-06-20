@@ -1,95 +1,324 @@
 <!DOCTYPE HTML>
-<!--
-    Strata by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-    <head>
-        <title>Portafolio Académico | Xavier Cardenas</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-    </head>
-    <body class="is-preload">
+<html lang="es">
+<head>
+    <title>Portafolio Académico | Xavier Cardenas</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <style>
+        /* Estilos Globales - Tema Oscuro Minimalista */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #121214;
+            color: #e1e1e6;
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        a {
+            color: #3b82f6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #60a5fa;
+        }
 
-        <!-- Header -->
-            <header id="header">
-                <div class="inner">
-                    <a href="#" class="image avatar"><img src="images/Fotocv.png" alt="Foto de perfil de Xavier Cardenas" /></a>
-                    <h1><strong>Hola, soy Xavier Cardenas</strong>, estudiante de<br />
-                    Ingeniería en Computación construyendo<br />
-                    mi camino en el desarrollo de software.</h1>
+        /* Menú de Navegación Superior */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(18, 18, 20, 0.95);
+            border-bottom: 1px solid #29292e;
+            z-index: 1000;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }
+        .logo span {
+            color: #3b82f6;
+        }
+        nav a {
+            color: #c4c4cc;
+            margin-left: 25px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        nav a:hover, nav a.active {
+            color: #ffffff;
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 5px;
+        }
+
+        /* Contenedor y Secciones */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #29292e;
+        }
+        section:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Sección de Inicio / Perfil */
+        .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        .avatar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #3b82f6;
+            object-fit: cover;
+        }
+        .profile-text h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        .profile-text p {
+            font-size: 1.1rem;
+            color: #a8a8b3;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3b82f6;
+            color: #ffffff;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2563eb;
+            color: #ffffff;
+        }
+
+        /* Sección de Proyectos Académicos */
+        .subject-block {
+            margin-top: 40px;
+        }
+        .subject-title {
+            font-size: 1.3rem;
+            color: #3b82f6;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .subject-title::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+            gap: 25px;
+        }
+        .project-card {
+            background-color: #1e1e24;
+            border: 1px solid #29292e;
+            border-radius: 8px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: #3b82f6;
+        }
+        .project-header h4 {
+            font-size: 1.25rem;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .project-description {
+            color: #a8a8b3;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .tag {
+            background-color: #29292e;
+            color: #c4c4cc;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .project-link {
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Sección de Contacto */
+        .contact-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+        .contact-label {
+            font-weight: bold;
+            color: #ffffff;
+            width: 180px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #7c7c8a;
+            font-size: 0.85rem;
+            border-top: 1px solid #29292e;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            header { padding: 20px; }
+            nav a { margin-left: 15px; font-size: 0.85rem; }
+            .profile-container { flex-direction: column; text-align: center; }
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">// <span>XAVIER CARDENAS</span></div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <section id="inicio">
+            <div class="profile-container">
+                <div class="avatar">
+                    <img src="images/Fotocv.png" alt="Xavier Cardenas" />
                 </div>
-            </header>
-
-            <div id="main">
-                    <section id="one">
-                        <header class="major">
-                            <h2>Bienvenido a mi Portafolio Académico</h2>
-                        </header>
-                        <p>Este espacio documenta mi progreso y proyectos desarrollados a lo largo de mi carrera universitaria. Aquí puedes revisar mi perfil de GitHub con todos mis proyectos y repositorios</p>
-                        <ul class="actions">
-                            <li><a href="https://github.com/XACP2806" class="button" target="_blank">Ver mi GitHub</a></li>
-                        </ul>
-                    </section>
-
-                    <section id="two">
-                        <h2>Proyectos por Materia</h2>
-                        <p>A continuación encontrarás mis proyectos organizados por periodo académico. Cada proyecto técnico reside en su propio repositorio independiente.</p>
-                        <div class="row">
-                            
-                            <!-- PLANTILLA DE MATERIA (Usa esto para tus futuras materias) -->
-                            <article class="col-6 col-12-xsmall work-item">
-                                <!-- El enlace apunta al README dentro de la carpeta de la materia -->
-                                <a href="2026-1 - Lenguajes de Programación/README.md" class="image fit thumb"><img src="images/lenguajes-de-programación.jpg" alt="Portada Materia" /></a>
-                                <h3>2026-1 - Lenguajes de Programación</h3>
-                                <p>Proyectos: proximamente.</p>
-                            </article>
-                            
-                            <!-- Puedes agregar más <article> copiando y pegando el bloque de arriba cuando tengas más materias -->
-
-                        </div>
-                    </section>
-
-                <!-- Three: Contacto -->
-                    <section id="three">
-                        <h2>Contacto</h2>
-                        <p>Si deseas colaborar o conocer más sobre mi trabajo, no dudes en escribirme.</p>
-                        <div class="row">
-                            <div class="col-8 col-12-small">
-                                <ul class="labeled-icons">
-                                    <li>
-                                        <h3 class="icon solid fa-envelope"><span class="label">Email Institucional</span></h3>
-                                        <!-- Recuerda usar tu correo institucional como indica la guía -->
-                                        <a href="mailto:xavier.cardenas@uees.edu.ec">xavier.cardenas@uees.edu.ec</a>
-                                    </li>
-                                    <li>
-                                        <h3 class="icon brands fa-github"><span class="label">Github</span></h3>
-                                        <a href="https://github.com/XACP2806">github.com/XACP2806</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
+                <div class="profile-text">
+                    <h1>Xavier Cardenas</h1>
+                    <p>Estudiante de Ingeniería en Computación — UEES. Enfocado en la construcción de sistemas y desarrollo de software estructurado.</p>
+                    <a href="https://github.com/XACP2806" class="btn" target="_blank">Ver mi GitHub</a>
+                </div>
             </div>
+        </section>
 
-        <!-- Footer -->
-            <footer id="footer">
-                <div class="inner">
-                    <ul class="copyright">
-                        <li>&copy; </li><li>Diseño: <a href="http://html5up.net">HTML5 UP</a></li>
-                    </ul>
+        <section id="proyectos">
+            <h2>Proyectos Académicos</h2>
+            <p>Trabajo organizado por materia, siguiendo los lineamientos técnicos oficiales de la carrera.</p>
+            
+            <div class="subject-block">
+                <div class="subject-title">2026-1 - Lenguajes de Programación</div>
+                
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Prolog-Game</h4>
+                            <p class="project-description">Juego de rol cuyo núcleo lógico opera sobre una base de conocimiento en Prolog para gestionar reglas, ataques, inventario y misiones. Se integra con una capa construida en Laravel que actúa como puente para recibir instrucciones y presentar los resultados de la simulación.</p>
+                        </div>
+                        <div>
+                            <div class="project-tags">
+                                <span class="tag">Prolog</span>
+                                <span class="tag">PHP</span>
+                                <span class="tag">Laravel</span>
+                                <span class="tag">Blade</span>
+                            </div>
+                            <a href="2026-1 - Lenguajes de Programación/README.md" class="project-link">Ver Repositorio &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>StadiumHub</h4>
+                            <p class="project-description">Sistema de Mantenimiento de Estadios - FIFA 2026. Plataforma web desarrollada en Laravel para la gestión integral de las sedes mundialistas. Conecta y agiliza el flujo de trabajo de roles clave mediante un acceso unificado, garantizando el estado óptimo de cada recinto.</p>
+                        </div>
+                        <div>
+                            <div class="project-tags">
+                                <span class="tag">PHP</span>
+                                <span class="tag">Laravel</span>
+                                <span class="tag">Blade</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <a href="https://github.com/justinsoledispa/acceso-estadio-laravel" class="project-link" target="_blank">Ver Repositorio &rarr;</a>
+                        </div>
+                    </div>
+
                 </div>
-            </footer>
+            </div>
+        </section>
 
-        <!-- Scripts -->
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/jquery.poptrox.min.js"></script>
-            <script src="assets/js/browser.min.js"></script>
-            <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Canales de comunicación académica e institucional:</p>
+            <ul class="contact-list">
+                <li class="contact-item">
+                    <span class="contact-label">Email Institucional:</span>
+                    <a href="mailto:xavier.cardenas@uees.edu.ec">xavier.cardenas@uees.edu.ec</a>
+                </li>
+                <li class="contact-item">
+                    <span class="contact-label">GitHub:</span>
+                    <a href="https://github.com/XACP2806" target="_blank">github.com/XACP2806</a>
+                </li>
+            </ul>
+        </section>
 
-    </body>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 | Diseñado de acuerdo con la Guía de Implementación del Portafolio Académico</p>
+    </footer>
+
+</body>
 </html>
