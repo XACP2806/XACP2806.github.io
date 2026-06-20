@@ -9,7 +9,7 @@
 1. **Prolog-Game**
    * **Descripción:** Juego cuyo núcleo lógico opera sobre una base de conocimiento en Prolog para gestionar reglas, ataques, inventario y misiones. Se integra con una capa construida en Laravel.
    * **Estado:** Completado
-   * **Repositorio Oficial:** [[Enlace al repositorio externo se colocará aquí](https://github.com/XACP2806/Recuperaci-nlecci-nProlog)]
+   * **Repositorio Oficial:** [https://github.com/XACP2806/Recuperaci-nlecci-nProlog](https://github.com/XACP2806/Recuperaci-nlecci-nProlog)
 
 2. **STADPASS**
    * **Descripción:** Sistema de acreditación y control de acceso a estadios con roles, credenciales digitales y validación por zona.
