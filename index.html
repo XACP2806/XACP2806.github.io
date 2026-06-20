@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <style>
-        /* Estilos Globales - Tema Oscuro Minimalista */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -16,7 +15,7 @@
             background-color: #121214;
             color: #e1e1e6;
             line-height: 1.6;
-            padding-top: 80px;
+            padding-top: 90px;
         }
         a {
             color: #3b82f6;
@@ -27,7 +26,7 @@
             color: #60a5fa;
         }
 
-        /* Menú de Navegación Superior */
+        /* Menú de Navegación Superior Estático */
         header {
             position: fixed;
             top: 0;
@@ -56,64 +55,69 @@
             font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-weight: 600;
         }
-        nav a:hover, nav a.active {
+        nav a:hover {
             color: #ffffff;
             border-bottom: 2px solid #3b82f6;
             padding-bottom: 5px;
         }
 
-        /* Contenedor y Secciones */
+        /* Contenedor de Secciones Sucesivas */
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 20px;
         }
         section {
-            padding: 60px 0;
+            padding: 80px 0;
             border-bottom: 1px solid #29292e;
         }
         section:last-child {
             border-bottom: none;
         }
         h2 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: #ffffff;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        /* Sección de Inicio / Perfil */
-        .profile-container {
-            display: flex;
-            align-items: center;
-            gap: 40px;
+        .hero-container {
+            text-align: left;
+            padding: 40px 0;
         }
-        .avatar img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid #3b82f6;
-            object-fit: cover;
+        .hero-tag {
+            color: #3b82f6;
+            font-size: 0.95rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
         }
-        .profile-text h1 {
-            font-size: 2.5rem;
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
             color: #ffffff;
-            margin-bottom: 10px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            letter-spacing: -1px;
         }
-        .profile-text p {
-            font-size: 1.1rem;
+        .hero-description {
+            font-size: 1.25rem;
             color: #a8a8b3;
-            margin-bottom: 20px;
+            max-width: 800px;
+            margin-bottom: 35px;
         }
         .btn {
             display: inline-block;
             background-color: #3b82f6;
             color: #ffffff;
-            padding: 10px 24px;
+            padding: 12px 30px;
             border-radius: 6px;
             font-weight: 600;
+            font-size: 1rem;
             transition: background-color 0.3s;
         }
         .btn:hover {
@@ -121,17 +125,21 @@
             color: #ffffff;
         }
 
-        /* Sección de Proyectos Académicos */
+        /* Bloques de Asignaturas y Grillas de Proyectos */
         .subject-block {
-            margin-top: 40px;
+            margin-top: 50px;
+        }
+        .subject-block:first-of-type {
+            margin-top: 20px;
         }
         .subject-title {
-            font-size: 1.3rem;
-            color: #3b82f6;
-            margin-bottom: 20px;
+            font-size: 1.4rem;
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 25px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
         .subject-title::before {
             content: '';
@@ -144,13 +152,13 @@
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-            gap: 25px;
+            gap: 30px;
         }
         .project-card {
             background-color: #1e1e24;
             border: 1px solid #29292e;
             border-radius: 8px;
-            padding: 25px;
+            padding: 30px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -161,25 +169,26 @@
             border-color: #3b82f6;
         }
         .project-header h4 {
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             color: #ffffff;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
         .project-description {
             color: #a8a8b3;
             font-size: 0.95rem;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            text-align: justify;
         }
         .project-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         .tag {
             background-color: #29292e;
             color: #c4c4cc;
-            padding: 4px 10px;
+            padding: 4px 12px;
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: 500;
@@ -189,7 +198,7 @@
             font-weight: 600;
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
         }
 
         /* Sección de Contacto */
@@ -212,17 +221,17 @@
         /* Footer */
         footer {
             text-align: center;
-            padding: 40px 0;
+            padding: 50px 0;
             color: #7c7c8a;
             font-size: 0.85rem;
             border-top: 1px solid #29292e;
         }
 
-        /* Responsividad */
+        /* Ajustes Responsivos */
         @media (max-width: 768px) {
             header { padding: 20px; }
             nav a { margin-left: 15px; font-size: 0.85rem; }
-            .profile-container { flex-direction: column; text-align: center; }
+            .hero-title { font-size: 2.8rem; }
             .projects-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -241,25 +250,20 @@
     <div class="container">
 
         <section id="inicio">
-            <div class="profile-container">
-                <div class="avatar">
-                    <img src="images/Fotocv.png" alt="Xavier Cardenas" />
-                </div>
-                <div class="profile-text">
-                    <h1>Xavier Cardenas</h1>
-                    <p>Estudiante de Ingeniería en Computación — UEES. Enfocado en la construcción de sistemas y desarrollo de software estructurado.</p>
-                    <a href="https://github.com/XACP2806" class="btn" target="_blank">Ver mi GitHub</a>
-                </div>
+            <div class="hero-container">
+                <p class="hero-tag">// PORTAFOLIO ACADÉMICO</p>
+                <h1 class="hero-title">Xavier Cardenas</h1>
+                <p class="hero-description">Estudiante de Ingeniería en Computación en la Universidad de Especialidades Espíritu Santo (UEES). Espacio enfocado en la organización, desarrollo estructurado y control de versiones técnico de sistemas aplicados.</p>
+                <a href="https://github.com/XACP2806" class="btn" target="_blank">Ver mi GitHub</a>
             </div>
         </section>
 
         <section id="proyectos">
             <h2>Proyectos Académicos</h2>
-            <p>Trabajo organizado por materia, siguiendo los lineamientos técnicos oficiales de la carrera.</p>
+            <p>Trabajo organizado por materia, siguiendo la nomenclatura oficial de carpetas del repositorio.</p>
             
             <div class="subject-block">
-                <div class="subject-title">2026-1 - Lenguajes de Programación</div>
-                
+                <div class="subject-title">2026 - 1 - Lenguajes de Programación</div>
                 <div class="projects-grid">
                     
                     <div class="project-card">
@@ -281,7 +285,7 @@
                     <div class="project-card">
                         <div class="project-header">
                             <h4>StadiumHub</h4>
-                            <p class="project-description">Sistema de Mantenimiento de Estadios - FIFA 2026. Plataforma web desarrollada en Laravel para la gestión integral de las sedes mundialistas. Conecta y agiliza el flujo de trabajo de roles clave mediante un acceso unificado, garantizando el estado óptimo de cada recinto.</p>
+                            <p class="project-description">Sistema de Mantenimiento de Estadios – FIFA 2026. Plataforma web desarrollada en Laravel para la gestión integral de las sedes mundialistas. Conecta y agiliza el flujo de trabajo de roles clave mediante un acceso unificado, garantizando el estado óptimo de cada recinto.</p>
                         </div>
                         <div>
                             <div class="project-tags">
@@ -297,6 +301,30 @@
 
                 </div>
             </div>
+
+            <div class="subject-block">
+                <div class="subject-title">2026 - Ext - Base de Datos II</div>
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Proyecto BD2 Fractalia</h4>
+                            <p class="project-description">Diseño e implementación de un esquema de base de datos relacional avanzada. Incluye la optimización de consultas complejas, la estructuración de procedimientos almacenados, disparadores y la gestión eficiente de índices para el ecosistema del sistema Fractalia.</p>
+                        </div>
+                        <div>
+                            <div class="project-tags">
+                                <span class="tag">SQL</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">Optimization</span>
+                                <span class="tag">Database</span>
+                            </div>
+                            <a href="https://github.com/jvit04/Proyecto_bd2_Fractalia" class="project-link" target="_blank">Ver Repositorio &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </section>
 
         <section id="contacto">
@@ -317,7 +345,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 | Diseñado de acuerdo con la Guía de Implementación del Portafolio Académico</p>
+        <p>&copy; 2026 | Diseñado de acuerdo con la Guía de Implementación del Portafolio Académico UEES</p>
     </footer>
 
 </body>
