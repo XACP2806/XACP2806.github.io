@@ -199,6 +199,23 @@
             gap: 6px;
         }
 
+        /* Sección de Contacto */
+        .contact-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+        .contact-label {
+            font-weight: bold;
+            color: #ffffff;
+            width: 180px;
+        }
+
         footer {
             text-align: center;
             padding: 50px 0;
@@ -221,11 +238,13 @@
         <nav>
             <a href="#inicio">Inicio</a>
             <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
     <div class="container">
 
+        <!-- SECCIÓN: INICIO -->
         <section id="inicio">
             <div class="hero-container">
                 <p class="hero-tag">// PORTAFOLIO ACADÉMICO</p>
@@ -235,6 +254,7 @@
             </div>
         </section>
 
+        <!-- SECCIÓN: PROYECTOS -->
         <section id="proyectos">
             <h2>Materias y Proyectos</h2>
 
@@ -243,7 +263,7 @@
                 <div class="subject-title">2026 - 1 - Lenguajes de Programación</div>
                 <div class="projects-grid">
                     
-                    <!-- Prolog-Game (Modificado para no ser igual al del compañero) -->
+                    <!-- Prolog-Game -->
                     <div class="project-card">
                         <div class="project-header">
                             <h4>Prolog-Game</h4>
@@ -258,7 +278,7 @@
                         </div>
                     </div>
 
-                    <!-- STADPASS (Igual a image_cd7924.png) -->
+                    <!-- STADPASS (Texto idéntico a image_cd7924.png) -->
                     <div class="project-card">
                         <div class="project-header">
                             <h4>STADPASS</h4>
@@ -281,7 +301,7 @@
                 <div class="subject-title">2026 - Ext - Base de Datos II</div>
                 <div class="projects-grid">
                     
-                    <!-- Fractalia DW Analytics (Igual a image_cd790a.png) -->
+                    <!-- Fractalia DW Analytics (Texto idéntico a image_cd790a.png) -->
                     <div class="project-card">
                         <div class="project-header">
                             <h4>Fractalia DW Analytics</h4>
@@ -300,6 +320,23 @@
             </div>
 
         </section>
+
+        <!-- SECCIÓN: CONTACTO -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Canales de comunicación académica e institucional:</p>
+            <ul class="contact-list">
+                <li class="contact-item">
+                    <span class="contact-label">Email Institucional:</span>
+                    <a href="mailto:xavier.cardenas@uees.edu.ec">xavier.cardenas@uees.edu.ec</a>
+                </li>
+                <li class="contact-item">
+                    <span class="contact-label">GitHub:</span>
+                    <a href="https://github.com/XACP2806" target="_blank">github.com/XACP2806</a>
+                </li>
+            </ul>
+        </section>
+
     </div>
 
     <footer>
