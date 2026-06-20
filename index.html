@@ -12,7 +12,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            background-color: #121214;
+            background-color: #0f0f11;
             color: #e1e1e6;
             line-height: 1.6;
             padding-top: 90px;
@@ -26,14 +26,14 @@
             color: #60a5fa;
         }
 
-        /* Menú de Navegación Superior Estático */
+        /* Menú de Navegación */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(18, 18, 20, 0.95);
-            border-bottom: 1px solid #29292e;
+            background-color: rgba(15, 15, 17, 0.95);
+            border-bottom: 1px solid #222226;
             z-index: 1000;
             padding: 20px 40px;
             display: flex;
@@ -63,15 +63,15 @@
             padding-bottom: 5px;
         }
 
-        /* Contenedor de Secciones Sucesivas */
+        /* Contenedor Principal */
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 20px;
         }
         section {
-            padding: 80px 0;
-            border-bottom: 1px solid #29292e;
+            padding: 60px 0;
+            border-bottom: 1px solid #222226;
         }
         section:last-child {
             border-bottom: none;
@@ -86,7 +86,7 @@
 
         .hero-container {
             text-align: left;
-            padding: 40px 0;
+            padding: 60px 0;
         }
         .hero-tag {
             color: #3b82f6;
@@ -97,7 +97,7 @@
             margin-bottom: 15px;
         }
         .hero-title {
-            font-size: 4rem;
+            font-size: 4.8rem;
             font-weight: 800;
             color: #ffffff;
             line-height: 1.1;
@@ -105,9 +105,9 @@
             letter-spacing: -1px;
         }
         .hero-description {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             color: #a8a8b3;
-            max-width: 800px;
+            max-width: 850px;
             margin-bottom: 35px;
         }
         .btn {
@@ -122,15 +122,11 @@
         }
         .btn:hover {
             background-color: #2563eb;
-            color: #ffffff;
         }
 
-        /* Bloques de Asignaturas y Grillas de Proyectos */
+        /* Secciones de Materias */
         .subject-block {
             margin-top: 50px;
-        }
-        .subject-block:first-of-type {
-            margin-top: 20px;
         }
         .subject-title {
             font-size: 1.4rem;
@@ -155,8 +151,8 @@
             gap: 30px;
         }
         .project-card {
-            background-color: #1e1e24;
-            border: 1px solid #29292e;
+            background-color: #16161a;
+            border: 1px solid #222226;
             border-radius: 8px;
             padding: 30px;
             display: flex;
@@ -186,7 +182,7 @@
             margin-bottom: 25px;
         }
         .tag {
-            background-color: #29292e;
+            background-color: #222226;
             color: #c4c4cc;
             padding: 4px 12px;
             border-radius: 20px;
@@ -201,37 +197,17 @@
             gap: 6px;
         }
 
-        /* Sección de Contacto */
-        .contact-list {
-            list-style: none;
-            margin-top: 20px;
-        }
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            font-size: 1.05rem;
-        }
-        .contact-label {
-            font-weight: bold;
-            color: #ffffff;
-            width: 180px;
-        }
-
-        /* Footer */
         footer {
             text-align: center;
             padding: 50px 0;
             color: #7c7c8a;
             font-size: 0.85rem;
-            border-top: 1px solid #29292e;
+            border-top: 1px solid #222226;
+            margin-top: 40px;
         }
 
-        /* Ajustes Responsivos */
         @media (max-width: 768px) {
-            header { padding: 20px; }
-            nav a { margin-left: 15px; font-size: 0.85rem; }
-            .hero-title { font-size: 2.8rem; }
+            .hero-title { font-size: 3rem; }
             .projects-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -243,7 +219,6 @@
         <nav>
             <a href="#inicio">Inicio</a>
             <a href="#proyectos">Proyectos</a>
-            <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
@@ -253,72 +228,69 @@
             <div class="hero-container">
                 <p class="hero-tag">// PORTAFOLIO ACADÉMICO</p>
                 <h1 class="hero-title">Xavier Cardenas</h1>
-                <p class="hero-description">Estudiante de Ingeniería en Computación en la Universidad de Especialidades Espíritu Santo (UEES). Espacio enfocado en la organización, desarrollo estructurado y control de versiones técnico de sistemas aplicados.</p>
-                <a href="https://github.com/XACP2806" class="btn" target="_blank">Ver mi GitHub</a>
+                <p class="hero-description">Estudiante de Ingeniería en Computación en la Universidad de Especialidades Espíritu Santo (UEES) en Guayaquil, Ecuador. Índice de control de desarrollo de software y gestión analítica de datos.</p>
+                <a href="https://github.com/XACP2806" class="btn" target="_blank">Ver GitHub</a>
             </div>
         </section>
 
         <section id="proyectos">
-            <h2>Proyectos Académicos</h2>
-            <p>Trabajo organizado por materia, siguiendo la nomenclatura oficial de carpetas del repositorio.</p>
-            
+            <h2>Materias y Proyectos</h2>
+
+            <!-- LENGUAJES DE PROGRAMACIÓN -->
             <div class="subject-block">
                 <div class="subject-title">2026 - 1 - Lenguajes de Programación</div>
                 <div class="projects-grid">
                     
+                    <!-- Prolog-Game (Modificado para no ser igual al del compañero) -->
                     <div class="project-card">
                         <div class="project-header">
                             <h4>Prolog-Game</h4>
-                            <p class="project-description">Juego de rol cuyo núcleo lógico opera sobre una base de conocimiento en Prolog para gestionar reglas, ataques, inventario y misiones. Se integra con una capa construida en Laravel que actúa como puente para recibir instrucciones y presentar los resultados de la simulación.</p>
+                            <p class="project-description">Desarrollo de un entorno RPG interactivo fundamentado en lógica de predicados con Prolog para el procesamiento de mecánicas de juego, integrado dinámicamente con un backend en Laravel para la gestión web y de interfaz.</p>
                         </div>
                         <div>
                             <div class="project-tags">
                                 <span class="tag">Prolog</span>
-                                <span class="tag">PHP</span>
                                 <span class="tag">Laravel</span>
-                                <span class="tag">Blade</span>
                             </div>
-                            <a href="2026-1 - Lenguajes de Programación/README.md" class="project-link">Ver Repositorio &rarr;</a>
+                            <a href="2026-1 - Lenguajes de Programación/README.md" class="project-link">Ver detalles &rarr;</a>
                         </div>
                     </div>
 
+                    <!-- STADPASS (Igual a image_cd7924.png) -->
                     <div class="project-card">
                         <div class="project-header">
-                            <h4>StadiumHub</h4>
-                            <p class="project-description">Sistema de Mantenimiento de Estadios – FIFA 2026. Plataforma web desarrollada en Laravel para la gestión integral de las sedes mundialistas. Conecta y agiliza el flujo de trabajo de roles clave mediante un acceso unificado, garantizando el estado óptimo de cada recinto.</p>
+                            <h4>STADPASS</h4>
+                            <p class="project-description">Sistema de acreditación y control de acceso a estadios con roles, credenciales digitales y validación por zona.</p>
                         </div>
                         <div>
                             <div class="project-tags">
                                 <span class="tag">PHP</span>
                                 <span class="tag">Laravel</span>
-                                <span class="tag">Blade</span>
-                                <span class="tag">CSS</span>
-                                <span class="tag">JavaScript</span>
                             </div>
-                            <a href="https://github.com/justinsoledispa/acceso-estadio-laravel" class="project-link" target="_blank">Ver Repositorio &rarr;</a>
+                            <a href="https://github.com/justinsoledispa/acceso-estadio-laravel" class="project-link" target="_blank">Repositorio Oficial &rarr;</a>
                         </div>
                     </div>
 
                 </div>
             </div>
 
+            <!-- BASE DE DATOS II -->
             <div class="subject-block">
                 <div class="subject-title">2026 - Ext - Base de Datos II</div>
                 <div class="projects-grid">
                     
+                    <!-- Fractalia DW Analytics (Igual a image_cd790a.png) -->
                     <div class="project-card">
                         <div class="project-header">
-                            <h4>Proyecto BD2 Fractalia</h4>
-                            <p class="project-description">Diseño e implementación de un esquema de base de datos relacional avanzada. Incluye la optimización de consultas complejas, la estructuración de procedimientos almacenados, disparadores y la gestión eficiente de índices para el ecosistema del sistema Fractalia.</p>
+                            <h4>Fractalia DW Analytics</h4>
+                            <p class="project-description">Proyecto de Base de datos II donde se desarrolló un Data Warehouse y una aplicación que permite observar distintas métricas con los datos simulados de la empresa otorgada.</p>
                         </div>
                         <div>
                             <div class="project-tags">
-                                <span class="tag">SQL</span>
+                                <span class="tag">Data Warehouse</span>
                                 <span class="tag">PostgreSQL</span>
-                                <span class="tag">Optimization</span>
-                                <span class="tag">Database</span>
                             </div>
-                            <a href="https://github.com/jvit04/Proyecto_bd2_Fractalia" class="project-link" target="_blank">Ver Repositorio &rarr;</a>
+                            <a href="https://github.com/jvit04/Proyecto_bd2_Fractalia" class="project-link" target="_blank">Repositorio Oficial &rarr;</a>
                         </div>
                     </div>
 
@@ -326,26 +298,10 @@
             </div>
 
         </section>
-
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Canales de comunicación académica e institucional:</p>
-            <ul class="contact-list">
-                <li class="contact-item">
-                    <span class="contact-label">Email Institucional:</span>
-                    <a href="mailto:xavier.cardenas@uees.edu.ec">xavier.cardenas@uees.edu.ec</a>
-                </li>
-                <li class="contact-item">
-                    <span class="contact-label">GitHub:</span>
-                    <a href="https://github.com/XACP2806" target="_blank">github.com/XACP2806</a>
-                </li>
-            </ul>
-        </section>
-
     </div>
 
     <footer>
-        <p>&copy; 2026 | Diseñado de acuerdo con la Guía de Implementación del Portafolio Académico UEES</p>
+        <p>&copy; 2026 | Xavier Cardenas - Universidad de Especialidades Espíritu Santo</p>
     </footer>
 
 </body>
