@@ -8,8 +8,8 @@ En este espacio se documentan y listan todos los proyectos académicos desarroll
 
 1. **Prolog-Game**
    * **Descripción:** Entorno RPG interactivo fundamentado en lógica de predicados con Prolog, integrado dinámicamente con un backend en Laravel.
-   * **Estado:** En desarrollo
-   * **Repositorio Oficial:** [Enlace pendiente]
+   * **Estado:** Completado
+   * **Repositorio Oficial:** https://github.com/XACP2806/RPG_Prolog_Game
 
 2. **STADPASS**
    * **Descripción:** Sistema de acreditación y control de acceso a estadios con roles, credenciales digitales y validación por zona.
