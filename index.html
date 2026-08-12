@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <style>
+        /* Estilos Globales - Paleta Personalizada */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -12,28 +13,28 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            background-color: #0f0f11;
-            color: #e1e1e6;
+            background-color: #0d1412;
+            color: #f0f0f0;
             line-height: 1.6;
             padding-top: 90px;
         }
         a {
-            color: #3b82f6;
+            color: #94fad4;
             text-decoration: none;
             transition: color 0.3s ease;
         }
         a:hover {
-            color: #60a5fa;
+            color: #62a58c;
         }
 
-        /* Menú de Navegación */
+        /* Menú de Navegación Superior */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(15, 15, 17, 0.95);
-            border-bottom: 1px solid #222226;
+            background-color: rgba(13, 20, 18, 0.95);
+            border-bottom: 1px solid #2f5044;
             z-index: 1000;
             padding: 20px 40px;
             display: flex;
@@ -44,13 +45,13 @@
             font-weight: bold;
             font-size: 1.2rem;
             letter-spacing: 1px;
-            color: #ffffff;
+            color: #f4fffb;
         }
         .logo span {
-            color: #3b82f6;
+            color: #94fad4;
         }
         nav a {
-            color: #c4c4cc;
+            color: #f0f0f0;
             margin-left: 25px;
             font-size: 0.95rem;
             text-transform: uppercase;
@@ -58,8 +59,8 @@
             font-weight: 600;
         }
         nav a:hover {
-            color: #ffffff;
-            border-bottom: 2px solid #3b82f6;
+            color: #94fad4;
+            border-bottom: 2px solid #94fad4;
             padding-bottom: 5px;
         }
 
@@ -71,25 +72,26 @@
         }
         section {
             padding: 60px 0;
-            border-bottom: 1px solid #222226;
+            border-bottom: 1px solid #2f5044;
         }
         section:last-child {
             border-bottom: none;
         }
         h2 {
             font-size: 2.2rem;
-            color: #ffffff;
+            color: #f4fffb;
             margin-bottom: 30px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
+        /* Encabezado Principal */
         .hero-container {
             text-align: left;
             padding: 60px 0;
         }
         .hero-tag {
-            color: #3b82f6;
+            color: #94fad4;
             font-size: 0.95rem;
             font-weight: bold;
             text-transform: uppercase;
@@ -99,38 +101,39 @@
         .hero-title {
             font-size: 4.8rem;
             font-weight: 800;
-            color: #ffffff;
+            color: #f4fffb;
             line-height: 1.1;
             margin-bottom: 25px;
             letter-spacing: -1px;
         }
         .hero-description {
             font-size: 1.3rem;
-            color: #a8a8b3;
+            color: #f0f0f0;
             max-width: 850px;
             margin-bottom: 35px;
         }
         .btn {
             display: inline-block;
-            background-color: #3b82f6;
-            color: #ffffff;
+            background-color: #62a58c;
+            color: #0d1412;
             padding: 12px 30px;
             border-radius: 6px;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1rem;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         .btn:hover {
-            background-color: #2563eb;
+            background-color: #94fad4;
+            color: #0d1412;
         }
 
-        /* Secciones de Materias */
+        /* Secciones de Materias y Proyectos */
         .subject-block {
             margin-top: 50px;
         }
         .subject-title {
             font-size: 1.4rem;
-            color: #ffffff;
+            color: #f4fffb;
             font-weight: 700;
             margin-bottom: 25px;
             display: flex;
@@ -142,19 +145,19 @@
             display: inline-block;
             width: 8px;
             height: 8px;
-            background-color: #3b82f6;
+            background-color: #94fad4;
             border-radius: 50%;
         }
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
         }
         .project-card {
-            background-color: #16161a;
-            border: 1px solid #222226;
+            background-color: #141f1b;
+            border: 1px solid #2f5044;
             border-radius: 8px;
-            padding: 30px;
+            padding: 25px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -162,28 +165,28 @@
         }
         .project-card:hover {
             transform: translateY(-4px);
-            border-color: #3b82f6;
+            border-color: #94fad4;
         }
         .project-header h4 {
-            font-size: 1.4rem;
-            color: #ffffff;
-            margin-bottom: 15px;
+            font-size: 1.3rem;
+            color: #f4fffb;
+            margin-bottom: 12px;
         }
         .project-description {
-            color: #a8a8b3;
+            color: #f0f0f0;
             font-size: 0.95rem;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             text-align: justify;
         }
         .project-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         .tag {
-            background-color: #222226;
-            color: #c4c4cc;
+            background-color: #2f5044;
+            color: #f4fffb;
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 0.8rem;
@@ -197,7 +200,51 @@
             gap: 6px;
         }
 
-        /* Sección de Contacto */
+        /* Tarjetas de Certificados */
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .cert-card {
+            background-color: #141f1b;
+            border: 1px solid #2f5044;
+            border-radius: 8px;
+            padding: 25px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .cert-card:hover {
+            transform: translateY(-4px);
+            border-color: #94fad4;
+        }
+        .cert-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #2f5044;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #94fad4;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .cert-info h4 {
+            color: #f4fffb;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        .cert-info p {
+            color: #62a58c;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+
+        /* Contacto */
         .contact-list {
             list-style: none;
             margin-top: 20px;
@@ -210,22 +257,24 @@
         }
         .contact-label {
             font-weight: bold;
-            color: #ffffff;
+            color: #f4fffb;
             width: 180px;
         }
 
         footer {
             text-align: center;
             padding: 50px 0;
-            color: #7c7c8a;
+            color: #62a58c;
             font-size: 0.85rem;
-            border-top: 1px solid #222226;
+            border-top: 1px solid #2f5044;
             margin-top: 40px;
         }
 
         @media (max-width: 768px) {
+            header { padding: 15px 20px; }
+            nav a { margin-left: 10px; font-size: 0.8rem; }
             .hero-title { font-size: 3rem; }
-            .projects-grid { grid-template-columns: 1fr; }
+            .projects-grid, .certificates-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -236,6 +285,7 @@
         <nav>
             <a href="#inicio">Inicio</a>
             <a href="#proyectos">Proyectos</a>
+            <a href="#certificados">Certificados</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
@@ -247,8 +297,7 @@
             <div class="hero-container">
                 <p class="hero-tag">// PORTAFOLIO ACADÉMICO</p>
                 <h1 class="hero-title">Xavier Cardenas</h1>
-                <p class="hero-description">Estudiante de Ingeniería en Computación en la Universidad de Especialidades Espíritu Santo (UEES) en Guayaquil, Ecuador. Índice de control de desarrollo de software y gestión analítica de datos.</p>
-                <!-- Botón Actualizado -->
+                <p class="hero-description">Estudiante de Ingeniería en Computación en la Universidad de Especialidades Espíritu Santo (UEES) en Guayaquil, Ecuador. Índice de control de desarrollo de software, algoritmos y gestión analítica de datos.</p>
                 <a href="https://github.com/XACP2806/XACP2806.github.io" class="btn" target="_blank">Ver Repositorio</a>
             </div>
         </section>
@@ -262,22 +311,20 @@
                 <div class="subject-title">2026 - 1 - Lenguajes de Programación</div>
                 <div class="projects-grid">
                     
-                    <!-- Prolog-Game -->
                     <div class="project-card">
                         <div class="project-header">
                             <h4>Prolog-Game</h4>
-                            <p class="project-description">Desarrollo de un entorno RPG interactivo fundamentado en lógica de predicados con Prolog para el procesamiento de mecánicas de juego, integrado dinámicamente con un backend en Laravel para la gestión web y de interfaz.</p>
+                            <p class="project-description">Desarrollo de un entorno RPG interactivo fundamentado en lógica de predicados con Prolog para el procesamiento de mecánicas de juego, integrado dinámicamente con un backend en Laravel para la gestión web e interfaz.</p>
                         </div>
                         <div>
                             <div class="project-tags">
                                 <span class="tag">Prolog</span>
                                 <span class="tag">Laravel</span>
                             </div>
-                            <a href="https://github.com/XACP2806/Recuperaci-nlecci-nProlog" class="project-link" target="_blank">Ver detalles &rarr;</a>
+                            <a href="2026-1 - Lenguajes de Programación/README.md" class="project-link">Ver detalles &rarr;</a>
                         </div>
                     </div>
 
-                    <!-- STADPASS -->
                     <div class="project-card">
                         <div class="project-header">
                             <h4>STADPASS</h4>
@@ -292,6 +339,20 @@
                         </div>
                     </div>
 
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Abyss Diver</h4>
+                            <p class="project-description">Videojuego temático de exploración submarina desarrollado para aplicar paradigmas de programación, control de estados de juego y mecánicas interactivas en tiempo real.</p>
+                        </div>
+                        <div>
+                            <div class="project-tags">
+                                <span class="tag">Game Dev</span>
+                                <span class="tag">Paradigmas</span>
+                            </div>
+                            <a href="https://github.com/justsole1385/abyss-diver" class="project-link" target="_blank">Repositorio Oficial &rarr;</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -300,7 +361,6 @@
                 <div class="subject-title">2026 - Ext - Base de Datos II</div>
                 <div class="projects-grid">
                     
-                    <!-- Fractalia DW Analytics -->
                     <div class="project-card">
                         <div class="project-header">
                             <h4>Fractalia DW Analytics</h4>
@@ -318,6 +378,70 @@
                 </div>
             </div>
 
+            <!-- ESTRUCTURA DE DATOS -->
+            <div class="subject-block">
+                <div class="subject-title">2025 - 2 - Estructura de datos</div>
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>To-Do App (Cardenas-Vaca)</h4>
+                            <p class="project-description">Aplicación de gestión y priorización de tareas enfocada en la implementación práctica de estructuras de datos lineales y no lineales para la manipulación eficiente de actividades.</p>
+                        </div>
+                        <div>
+                            <div class="project-tags">
+                                <span class="tag">Estructuras de Datos</span>
+                                <span class="tag">Algoritmos</span>
+                            </div>
+                            <a href="https://github.com/DanielV-13/PROYECTO-TO-DO-APP-CARDENAS-VACA" class="project-link" target="_blank">Repositorio Oficial &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Parser XML</h4>
+                            <p class="project-description">Analizador sintáctico para archivos XML que utiliza pilas y árboles jerárquicos para el procesamiento, validación de etiquetas y extracción estructurada de datos.</p>
+                        </div>
+                        <div>
+                            <div class="project-tags">
+                                <span class="tag">XML</span>
+                                <span class="tag">Árboles & Pilas</span>
+                            </div>
+                            <a href="https://github.com/DanielV-13/ESTRUCTURA-DE-DATOS-PROYECTO-PARSER-XML" class="project-link" target="_blank">Repositorio Oficial &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SECCIÓN: CERTIFICADOS -->
+        <section id="certificados">
+            <h2>Certificados & Acreditaciones</h2>
+            <div class="certificates-grid">
+                
+                <!-- Insignia AWS -->
+                <div class="cert-card">
+                    <div class="cert-icon">AWS</div>
+                    <div class="cert-info">
+                        <h4>AWS Academy Accreditation / Certification</h4>
+                        <p>Amazon Web Services • Expedido recientemente</p>
+                        <a href="#" class="project-link" target="_blank">Ver Credencial Digital &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Plantilla Certificado PDF 1 -->
+                <div class="cert-card">
+                    <div class="cert-icon">PDF</div>
+                    <div class="cert-info">
+                        <h4>Certificado Académico</h4>
+                        <p>Universidad de Especialidades Espíritu Santo</p>
+                        <a href="assets/certificados/certificado1.pdf" class="project-link" target="_blank">Abrir Documento (PDF) &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
         <!-- SECCIÓN: CONTACTO -->
